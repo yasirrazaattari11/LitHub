@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "697362460260",
+    "project_id": "lithub-228db",
+    "storage_bucket": "lithub-228db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697362460260:android:3a20a8dd90f6470476f971",
+        "android_client_info": {
+          "package_name": "com.example.lithub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGY5VcK7JOxcyWLkgfqAJcgsT_C-mtApk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

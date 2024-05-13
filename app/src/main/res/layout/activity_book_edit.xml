@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashback"
+    tools:context=".activities.BookEditActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar2">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@color/transparent"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_width="110dp"
+            android:layout_marginTop="40dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logof"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/icon"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="20sp"
+            android:text="@string/edit_book_info"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleTl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+
+                app:hintEnabled="false"
+                android:layout_marginEnd="30dp">
+
+                <EditText
+                    android:id="@+id/titleEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_picture_as_pdf_grey_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/book_title"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp"
+
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTl"
+                android:layout_below="@id/titleTl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="false"
+                android:layout_marginEnd="30dp">
+
+                <EditText
+                    android:id="@+id/descriptionEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_picture_as_pdf_grey_24"
+                    android:drawablePadding="10dp"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp"
+
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/categorySelect"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_edittext"
+                android:drawableStart="@drawable/baseline_category_24"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/category"
+                android:textColorHint="@color/grey"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/descriptionTl"/>
+            <Button
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_button1"
+                android:text="@string/update"
+                android:layout_below="@id/categorySelect"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

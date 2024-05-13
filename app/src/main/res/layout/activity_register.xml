@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/splashback"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar">
+
+        <ImageButton
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <ImageView
+            android:id="@+id/loginIcon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logof"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/create_new_account"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_above="@+id/already"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/NameTile"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+
+                <EditText
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/emailTile"
+                android:layout_below="@id/NameTile"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                >
+
+                <EditText
+                    android:id="@+id/emailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/passwordTile"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey"
+                android:layout_below="@id/emailTile"
+                android:layout_marginTop="5dp"
+                app:hintEnabled="false"
+                >
+
+                <EditText
+                    android:id="@+id/passwordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/password"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/cpasswordTile"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey"
+                android:layout_below="@id/passwordTile"
+                android:layout_marginTop="5dp"
+                app:hintEnabled="false"
+                >
+
+                <EditText
+                    android:id="@+id/cpasswordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:background="@drawable/shape_edittext"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/confirm_password"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button1"
+                android:id="@+id/signupbutton"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:layout_below="@id/cpasswordTile"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/already"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="@string/already_have_account"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/purple_500"
+            android:text="@string/sign_in"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
